@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片展示</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="gallery">
+        <!-- 大图片显示区域 -->
+        <div class="main-image">
+            <img id="main" src="C:/imagee/image1.jpg" alt="大图片">
+        </div>
+        
+        <!-- 缩略图区域 -->
+        <div class="thumbnails">
+            <img class="thumb" src="C:/imagee/image1.jpg" alt="图片1" onclick="changeImage('C:/imagee/image1.jpg')">
+            <img class="thumb" src="C:/imagee/image2.jpg" alt="图片2" onclick="changeImage('C:/imagee/image2.jpg')">
+            <img class="thumb" src="C:/imagee/image3.jpg" alt="图片3" onclick="changeImage('C:/imagee/image3.jpg')">
+            <img class="thumb" src="C:/imagee/image4.jpg" alt="图片4" onclick="changeImage('C:/imagee/image4.jpg')">
+            <img class="thumb" src="C:/imagee/image5.jpg" alt="图片5" onclick="changeImage('C:/imagee/image5.jpg')">
+        </div>
+    </div>
+
+    <script>
+        // 切换大图的函数
+        function changeImage(imageSrc) {
+            document.getElementById('main').src = imageSrc;
+        }
+    </script>
+</body>
+</html>
