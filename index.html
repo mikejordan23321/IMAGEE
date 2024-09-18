@@ -1,48 +1,33 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN"> <!-- 文档类型为 HTML5，语言为简体中文 -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>赵雷 - 程艾影</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8"> <!-- 设置字符编码为 UTF-8，支持多种语言字符 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 适配移动设备，设置设备宽度，设置缩放比例为 1 -->
+    <title>图片展示</title> <!-- 定义网页标题 -->
+    <link rel="stylesheet" href="styles.css"> <!-- 链接外部样式表css文件 -->
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>民谣歌手 赵雷</h1>
-            <h2>歌曲：《程艾影》</h2>
-        </header>
+    <div class="gallery"> <!-- 创建一个类名为 gallery 的 div 容器，用于放置图片展示内容 -->
 
-        <section class="intro">
-            <p>赵雷，中国内地民谣歌手，以他细腻的歌词和独特的嗓音著称。他的代表作《成都》让他走红，但《程艾影》这首歌展现了他对生活的感悟与思考。</p>
-        </section>
+        <div class="main-image"> <!-- 创建一个类名为 main-image 的 div 容器，用于显示大图片 -->
+            <img id="main" src="image1.jpg" alt="大图片"> <!-- 定义主显示的图片，初始为 image1.jpg，alt 属性为“大图片” -->
+        </div>
 
-        <section class="lyrics-section">
-            <h3>《程艾影》歌词</h3>
-            <div id="lyrics">
-                   <p>歌词正在加载中...</p>
-            </div>
-        </section>
-
-
-        <section class="song-intro">
-            <h3>《程艾影》简介</h3>
-            <p>《程艾影》是赵雷的一首关于人生与梦想的歌曲，曲调深情而缓慢，歌词中充满了感情和故事。这首歌描绘了一个人的追梦旅程和其中的挣扎与希望。</p>
-        </section>
-
-        <section class="audio-player">
-            <h3>播放《程艾影》</h3>
-            <audio controls>
-                <source src="music.mp3" type="audio/mp3">
-                您的浏览器不支持音频播放。
-            </audio>
-        </section>
+        <!-- 缩略图区域 -->
+        <div class="thumbnails"> <!-- 创建一个类名为 thumbnails 的 div 容器，用于放置缩略图 -->
+            <!-- 定义五张缩略图，点击时调用 changeImage() 函数切换大图 -->
+            <img class="thumb" src="image1.jpg" alt="图片1" onclick="changeImage('image1.jpg')"> <!-- 缩略图1，点击时显示大图为 image1.jpg -->
+            <img class="thumb" src="image2.jpg" alt="图片2" onclick="changeImage('image2.jpg')"> <!-- 缩略图2，点击时显示大图为 image2.jpg -->
+            <img class="thumb" src="image3.jpg" alt="图片3" onclick="changeImage('image3.jpg')"> <!-- 缩略图3，点击时显示大图为 image3.jpg -->
+            <img class="thumb" src="image4.jpg" alt="图片4" onclick="changeImage('image4.jpg')"> <!-- 缩略图4，点击时显示大图为 image4.jpg -->
+            <img class="thumb" src="image5.jpg" alt="图片5" onclick="changeImage('image5.jpg')"> <!-- 缩略图5，点击时显示大图为 image5.jpg -->
+        </div>
     </div>
 
-    <footer>
-        <p>&copy; 2024 赵雷粉丝网站 | 关于民谣音乐的更多内容请访问相关资源</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+    <script>
+        function changeImage(imageSrc) {
+            document.getElementById('main').src = imageSrc;
+        }
+    </script>
+</body> <!-- 页面主体结束 -->
+</html> <!-- HTML 文档结束 -->
