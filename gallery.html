@@ -10,24 +10,23 @@
     <div class="gallery"> <!-- 创建一个类名为 gallery 的 div 容器，用于放置图片展示内容 -->
 
         <div class="main-image"> <!-- 创建一个类名为 main-image 的 div 容器，用于显示大图片 -->
-            <img id="main" src="C:/imagee/image1.jpg" alt="大图片"> <!-- 定义主显示的图片，初始为 image1.jpg，alt 属性为“大图片” -->
+            <img id="main" src="image1.jpg" alt="大图片"> <!-- 定义主显示的图片，初始为 image1.jpg，alt 属性为“大图片” -->
         </div>
 
         <!-- 缩略图区域 -->
         <div class="thumbnails"> <!-- 创建一个类名为 thumbnails 的 div 容器，用于放置缩略图 -->
             <!-- 定义五张缩略图，点击时调用 changeImage() 函数切换大图 -->
-            <img class="thumb" src="C:/imagee/image1.jpg" alt="图片1" onclick="changeImage('C:/imagee/image1.jpg')"> <!-- 缩略图1，点击时显示大图为 image1.jpg -->
-            <img class="thumb" src="C:/imagee/image2.jpg" alt="图片2" onclick="changeImage('C:/imagee/image2.jpg')"> <!-- 缩略图2，点击时显示大图为 image2.jpg -->
-            <img class="thumb" src="C:/imagee/image3.jpg" alt="图片3" onclick="changeImage('C:/imagee/image3.jpg')"> <!-- 缩略图3，点击时显示大图为 image3.jpg -->
-            <img class="thumb" src="C:/imagee/image4.jpg" alt="图片4" onclick="changeImage('C:/imagee/image4.jpg')"> <!-- 缩略图4，点击时显示大图为 image4.jpg -->
-            <img class="thumb" src="C:/imagee/image5.jpg" alt="图片5" onclick="changeImage('C:/imagee/image5.jpg')"> <!-- 缩略图5，点击时显示大图为 image5.jpg -->
+            <img class="thumb" src="image1.jpg" alt="图片1" onclick="changeImage('image1.jpg')"> <!-- 缩略图1，点击时显示大图为 image1.jpg -->
+            <img class="thumb" src="image2.jpg" alt="图片2" onclick="changeImage('image2.jpg')"> <!-- 缩略图2，点击时显示大图为 image2.jpg -->
+            <img class="thumb" src="image3.jpg" alt="图片3" onclick="changeImage('image3.jpg')"> <!-- 缩略图3，点击时显示大图为 image3.jpg -->
+            <img class="thumb" src="image4.jpg" alt="图片4" onclick="changeImage('image4.jpg')"> <!-- 缩略图4，点击时显示大图为 image4.jpg -->
+            <img class="thumb" src="image5.jpg" alt="图片5" onclick="changeImage('image5.jpg')"> <!-- 缩略图5，点击时显示大图为 image5.jpg -->
         </div>
     </div>
 
     <script>
-        // 切换大图的函数
-        function changeImage(imageSrc) { // 定义一个名为 changeImage 的函数
-            document.getElementById('main').src = imageSrc; // 通过 ID 获取主图元素，将其 src 属性更新为传入的图片路径
+        function changeImage(imageSrc) {
+            document.getElementById('main').src = imageSrc;
         }
     </script>
 </body> <!-- 页面主体结束 -->
